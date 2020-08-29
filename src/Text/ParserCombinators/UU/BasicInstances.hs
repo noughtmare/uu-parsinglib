@@ -83,7 +83,7 @@ data Str a s loc = Str { -- | the unconsumed part of the input
                          -- | the accumulated error messages
                          msgs     :: [Error loc],
                          -- | the current input position  
-                         pos      :: loc,           
+                         pos      :: !loc,           
                          -- | we want to avoid deletions after insertions
                          deleteOk :: !Bool         
                        }
